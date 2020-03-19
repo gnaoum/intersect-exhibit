@@ -4,141 +4,223 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Display practice</title>
-        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <title>Intersect</title>
+        <meta name="description" content="All about Intersect">
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="https://use.typekit.net/pan3egb.css">
     </head>
-    <style>
-        /* STYLES */
-      
-        .content {
-            padding: 10px;
-            background-color: blueviolet;
-            height: 100px;
-            margin: 10px;
+<style>
+    
+    body {
+        width: 768px;
+    }
+    
+    .container {
+        background-color: white;
+        filter: drop-shadow(0 0 0.75rem grey);
+        display: flex;
+        align-content: stretch;
+        justify-content: center;
+        padding: 10px;
+        margin:0;
+        width: 100%;        
         }
+    .nav-menu {
+        background-color: white;
+        padding: 20px;
         
-        body {
-            max-width: none;
-            margin: 0;
-            padding: 0;
-        }
+    }
+    
+    .home {
+        padding: 30px;
+        text-decoration: none;
+        font-family: montserrat;
+        color: gray;
+    }
+     .about {
+        padding: 30px;
+        text-decoration: none;
+        font-family: montserrat;
+        color: gray;
+    }
+     .thegallery {
+        padding: 30px;
+        text-decoration: none;
+        font-family: montserrat;
+        color: gray;
+    }
+     .contact {
+        padding: 30px;
+        text-decoration: none;
+        font-family: montserrat;
+        color: gray;
+    }
+    
+    .logo-page {
+        height: 500px;
+        grid-gap: 10px; 
+        padding: 10px;
+            
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    ". . logo . ."
+    ". . logo . ."
+    ". . logo . . "
+    ". . logo . ."
+    ". . date . .";
+  
+ }
+    
+    .logo {
+        grid-area: logo;
+        padding: 30px;
+    }
+    
+    .date {
+        grid-area: date;
+        margin-top: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-family: montserrat;
+        font-weight: 200;
+        font-size: 20px;
+        color: grey;
+    }
+    
+    .seniors {
+        text-align: center;
+        font-family: montserrat;
+        font-weight: 200;
+        font-size: 20px;
+        color: white;
+        grid-area: seniors;
+    }
+    
+    .gradient {
+        background-image: linear-gradient(rgba(144,44,142), rgba(14,146,203));
+        height: 900px;
+        display: grid;
+        grid-gap: 20px; 
+        padding: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1f;
         
-        h1 {
-            text-align: left; 
-            color: gray;
-            font-size: 12px;
-            font-family: americane-condensed, sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
+    }
+    
+    .blocks {
+        width: 100px;
+        background-color: white;
+        padding-top: 60px;
+        text-align: center;
+        font-family: montserrat;
+        font-weight: 100;
+        font-size: 10px;
+        color: grey;
+    }
+    
+    .block-annika {
+        grid-area: annika;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    
+    .block-bobby {
+        grid-area: bobby;
+
+    }
         
-        .holder {
-            height: 400px;
-            grid-gap: 10px; 
-            padding: 10px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-areas: 
-                "navbar navbar navbar navbar navbar"
-                ". . . . ."
-                ". logo-page logo-page logo-page ."
-                ". . date . .";                    
-        }
-        
-        .navbar {
-            grid-area: navbar;
-            background-color: white;
-            padding: 20px;
-            filter: drop-shadow(0 0 0.75rem grey);
-            position: fixed;
-        }
-        
-        .logo-page {
-            grid-area: logo-page;
-            justify-self: center;
-            margin-top: 100px;
-        }
-        
-        .date {
-            grid-area: date;
-            justify-self:center;
-            margin-top: 30px;
-            font-family: americane-condensed, sans-serif;
-            font-weight: 400;
-            font-style: normal;           
-            font-size: 30px;
-            color: gray;
-        }
-        
-       
-       
-    //*  
-        .home {  
-            grid-area: home;
-            color: gray;
-          
-        }
-        
-       .about {  
-           grid-area: about;
-           color: gray;
-        
-        }
-        
-        .contact {  
-          grid-area: contact;
-          color: gray;
-        } 
-        *//
+    .block-colin {
+        grid-area: colin;
+    }
+    
+    .block-gabi {
+        margin-bottom: 15px;
+        grid-area: gabi;
+        text-decoration: none;
+    }
+    
+    .block-grace {
+        grid-area: grace;
+    }
+    
+    .block-maddie {
+        grid-area: maddie;
+    }
+    
+    .block-sophie {
+        grid-area: sophie;
+    }
+    
+    .block-teresa {
+        grid-area: teresa;
+    }
     
     
-    </style>
-    <body>
-        <div class="holder">
-            <!--navbar-->
-            <div class="navbar">
-                <h1>HOME</h1> <h1>ABOUT</h1> <h1>CONTACT</h1>
-                
-        <!--   <div class="navbar home">
-                HOME
-            </div>
-        <div class="navbar about">
-                ABOUT
-            </div>
-            <div class="navbar contact">
-                CONTACT
-            </div> -->
-                </div>
-            
-            <div class="logo-page">
-                <img src="logo-website.png"
-                     width="400">
-            </div>  
-            
-                <div class="date">
-                    APRIL 3RD
-                </div>
-            
-    <div class="students">
-            <div class="students student-one">
-            </div>
-                <p>ANIKKA</p>
+/* iphone size */
+    
+    
         
-            <div class="students student-two">
-            </div>
-                <p>BOBBY</p>
-            <div class="students student-three">
-            </div> 
-                <p>COLIN</p>
-        <div class="students student-four">
-            </div> 
-                <p>GABI</p>
-    </div>
-            
+</style>
+    
+    
+    
+<body>
+    <div>
+    <div class="nav-bar">
+        <div class="container">
+            <div class="nav-menu"> <a href="index.html" class="home">HOME</a><a href="page-2.html" class="about">ABOUT</a><a href="#" class="thegallery">THE GALLERY</a><a href="#" class="contact">CONTACT</a></div>
+            <div class="nav-button"><div class="icon-nav"></div></div>
         </div>
-        
-    </body>
+    </div>
+    </div>
+    
+  
+         <div class="logo-page">
+             <div class="logo">
+                <img src="logo-website.png"
+                     width="300px">
+             </div>
+             <div class="date">
+                <h1 class="date">APRIL 3RD</h1>
+             </div>
+    </div>
+    
+    <div class="gradient">
+        <div class="students">
+        <p class="seniors">MEET THE SENIORS</p>
+
+             
+            <div class="blocks block-annika">
+                <h3>ANNIKA</h3> 
+            </div> 
+             <div class="blocks block-bobby">
+                <h3>BOBBY</h3>
+            </div>
+        <div class="blocks block-colin">
+                <h3>COLIN</h3>
+            </div>
+            <div class="blocks block-gabi"> <a href="page-3.html">GABI</a>
+            
+            </div> 
+             <div class="blocks block-grace">
+                <h3>GRACE</h3>
+            </div>
+        <div class="blocks block-maddie">
+                <h3>MADDIE</h3>
+            </div>
+            <div class="blocks block-sophie">
+                <h3>SOPHIE</h3> 
+            </div> 
+            <div class="blocks block-teresa">
+                <h3>TERESA</h3> 
+            </div> 
+        </div>
+    
+    </div>
+             
+          
+    
+</body>
 </html>
